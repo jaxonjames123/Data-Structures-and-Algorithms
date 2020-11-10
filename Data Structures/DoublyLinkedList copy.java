@@ -1,4 +1,4 @@
-package DataStructures;
+package src;
 
 public class DoublyLinkedList<T> implements Iterable<T> {
     private int size = 0;
@@ -201,7 +201,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     }
 
     public boolean contains(Object obj) {
-        return indexOf(obj) != 1;
+        return indexOf(obj) != -1;
     }
 
     @Override
@@ -229,7 +229,10 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         string.append("[");
         Node <T> traversal = head;
         while(traversal != null) {
-            string.append(traversal.data + ", ");
+            string.append(traversal.data);
+            if(traversal.next != null) {    
+                string.append(", ");
+            }
             traversal = traversal.next;
         }
         string.append("]");

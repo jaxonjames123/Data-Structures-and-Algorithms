@@ -1,4 +1,4 @@
-package DataStructures;
+package src;
 
 @SuppressWarnings("unchecked")
 public class DynamicArray<T> implements Iterable<T> {
@@ -150,8 +150,8 @@ public class DynamicArray<T> implements Iterable<T> {
     }
 
     public static void main(String[] args) {
-        DynamicArray<Integer> intArray = new DynamicArray();
-        DynamicArray<String> stringArray = new DynamicArray(3);
+        DynamicArray<Integer> intArray = new DynamicArray<Integer>();
+        DynamicArray<String> stringArray = new DynamicArray<String>(3);
         intArray.add(1);
         intArray.add(6);
         intArray.add(4);
